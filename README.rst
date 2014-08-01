@@ -6,32 +6,32 @@
 Contents
 ========
 
-``proj/``
----------
+''proj/''
+=========
 
 This is the project iself, created using
-``django-admin.py startproject proj``, and then the settings module
-(``proj/settings.py``) was modified to add ``demoapp`` to
-``INSTALLED_APPS``
+''django-admin.py startproject proj'', and then the settings module
+(''proj/settings.py'') was modified to add ''demoapp'' to
+''INSTALLED_APPS''
 
-``proj/celery.py``
-----------
+''proj/celery.py''
+==================
 
 This module contains the Celery application instance for this project,
-we take configuration from Django settings and use ``autodiscover_tasks`` to
-find task modules inside all packages listed in ``INSTALLED_APPS``.
+we take configuration from Django settings and use ''autodiscover_tasks'' to
+find task modules inside all packages listed in ''INSTALLED_APPS''.
 
-``demoapp/``
-------------
+''demoapp/''
+============
 
 Example generic app.  This is decoupled from the rest of the project by using
-the ``@shared_task`` decorator.  This decorator returns a proxy that always
+the ''@shared_task'' decorator.  This decorator returns a proxy that always
 points to the currently active Celery instance.
 
 Configure email account and password for gmail account in sendmail on file tasks.py
 
-``nodejs/``
-------------
+''nodejs/''
+===========
 
 Nodejs webserver with socket listen to chanel post on Redis and send it to 
 client using socketio.
